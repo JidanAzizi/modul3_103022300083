@@ -1,7 +1,11 @@
+using System.Windows.Forms.VisualStyles;
+
 namespace modul3_103022300083
 {
     public partial class Form1 : Form
     {
+        int A;
+        int B;
         public Form1()
         {
             InitializeComponent();
@@ -84,19 +88,32 @@ namespace modul3_103022300083
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+         
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             String tambah = btnAdd.Text;
-            textBox1.Text += tambah;
+            //textBox1.Text += tambah;
+            A = int.Parse(textBox1.Text);
+            textBox1.Text = "";
+            
         }
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            String hasil = btnResult.Text;
-            textBox1.Text += hasil;
+            //String hasil = btnResult.Text;
+            //textBox1.Text += hasil;
+            B = int.Parse(textBox1.Text);
+
+            int hasil = A + B;
+            String p = hasil.ToString();
+            textBox1.Text = p;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
