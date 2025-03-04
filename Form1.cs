@@ -107,8 +107,8 @@ namespace modul3_103022300083
             B = int.Parse(textBox1.Text);
 
             int hasil = A + B;
-            String p = hasil.ToString();
-            textBox1.Text = p;
+            String z = hasil.ToString();
+            textBox1.Text = z;
         }
 
         private void Form1_Load(object sender, EventArgs e)
